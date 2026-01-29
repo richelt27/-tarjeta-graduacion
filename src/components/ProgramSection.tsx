@@ -31,7 +31,7 @@ const ProgramSection: React.FC = () => {
                         <h3 className="text-2xl font-serif mb-2">Fecha</h3>
                         <p className="text-5xl font-bold text-gold mb-2">31</p>
                         <p className="text-xl tracking-widest uppercase">Enero 2025</p>
-                        <p className="mt-4 text-white/70">Viernes de Gala</p>
+                        <p className="mt-4 text-white/70">Sábado de Gala</p>
                     </motion.div>
 
                     {/* Time Card */}
