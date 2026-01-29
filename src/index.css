@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* Faculty Colors: Deep Navy & Rich Gold */
+  --color-primary: #002855;
+  /* Darker, more academic Navy */
+
+  --color-gold: #D4AF37;
+  /* Metallic Gold */
+  --color-gold-light: #F4C430;
+  --color-gold-dark: #AA6C39;
+
+  --color-cream: #fffbeb;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shine: shine 3s linear infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes shine {
+    100% {
+      background-position: 200% center;
+    }
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Retaining variable usage if needed, but @theme handles utility classes */
+}
+
+body {
+  @apply bg-cream text-gray-800 font-sans antialiased;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 40, 85, 0.03) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 40, 85, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 5s linear infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
